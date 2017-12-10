@@ -48,3 +48,6 @@ set shiftwidth=2
 set expandtab
 
 map § :NERDTreeToggle<CR>
+
+execute "set <M-q>=\eq"
+map <M-q> gqap
