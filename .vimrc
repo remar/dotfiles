@@ -10,6 +10,10 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-surround'
 Plugin 'dahu/vim-fanfingtastic'
+Plugin 'tpope/vim-unimpaired'
+
+" Highlight good jumps for fFtT
+" Plugin 'unblevable/quick-scope'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -51,3 +55,15 @@ map § :NERDTreeToggle<CR>
 
 execute "set <M-q>=\eq"
 map <M-q> gqap
+
+syntax enable
+colo torte
+
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+
+nmap ö [
+nmap ä ]
+omap ö [
+omap ä ]
+xmap ö [
+xmap ä ]
