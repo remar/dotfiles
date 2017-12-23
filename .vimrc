@@ -11,6 +11,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-surround'
 Plugin 'dahu/vim-fanfingtastic'
 Plugin 'tpope/vim-unimpaired'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 " Highlight good jumps for fFtT
 " Plugin 'unblevable/quick-scope'
@@ -53,17 +55,29 @@ set expandtab
 
 map § :NERDTreeToggle<CR>
 
+" Rewrap paragraph with Meta-q (as in emacs)
 execute "set <M-q>=\eq"
 map <M-q> gqap
+
+" Go to tag with Meta-t
+execute "set <M-t>=\et"
+map <M-t> <C-]>
 
 syntax enable
 colo torte
 
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
+" Swedish bindings for unimpaired
 nmap ö [
 nmap ä ]
 omap ö [
 omap ä ]
 xmap ö [
 xmap ä ]
+
+" Trigger configuration. Do not use <tab> if you use
+" https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
