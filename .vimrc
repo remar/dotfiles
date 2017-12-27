@@ -13,6 +13,7 @@ Plugin 'dahu/vim-fanfingtastic'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'vim-airline/vim-airline'
 
 " Highlight good jumps for fFtT
 " Plugin 'unblevable/quick-scope'
@@ -81,3 +82,7 @@ xmap ä ]
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+
+set wildmode=longest,list,full
+set wildmenu
